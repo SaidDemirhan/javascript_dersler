@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <title>Dom örnek</title>
+  </head>
+  <body>
+    <main>
+      <!--Ana icerik-->
+      <div class="container text-center">
+        <h1>Ornekler</h1>
+        <img class="resim" src="img/img2.jpg" alt="" />
+
+        <div class="mt-4 text text-center">
+          <audio
+            class="ses"
+            src="img/retro-ringtone .mp3"
+            controls
+            style="width: 0"
+          ></audio>
+          <button class="btn on btn-outline-warning">ara</button>
+          <button class="btn of btn-outline-primary">baglan</button>
+          <button class="btn speak btn-outline-danger">konus</button>
+        </div>
+        <div class="input-div mt-5">
+          <label for="textbox">Bir seyler yaziniz:</label>
+          <input class="textbox" type="textbox" value="" />
+          <label for="checkbox">kucuk/BÜYÜK</label>
+          <input class="checkbox" type="checkbox" />
+        </div>
+        <section>
+          <ul class="liste text-start">
+            <li>Javascript</li>
+            <li>Java</li>
+            <li>Phyton</li>
+            <li>SQL</li>
+            <li>C++</li>
+          </ul>
+        </section>
+        <div class="mt-5 text-start">
+          <input type="text" class="dil me-1" />
+          <button class="btn ekle btn-success">Ekle</button>
+          <button class="btn sil btn-danger">Sil</button>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
