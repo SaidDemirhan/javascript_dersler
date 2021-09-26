@@ -10,7 +10,8 @@ const buton = document.getElementById("btn");
 buton.style.width = "100px";
 buton.style.color = "red";
 buton.style.fontSize = "18px";
-buton.textContent = "ARA"; //textContent=tag lerin içeriğindeki yazıyı değiştirmek istersek
+buton.textContent = "ARA"; //textContent=tag lerin içeriğindeki
+//yazıyı değiştirmek istersek
 
 //***** GETELEMENTBYTAGNAME */
 
@@ -30,7 +31,7 @@ baslık[0].style.textAlign = "center";
 
 //en yaygin olarak kullanilandir.
 
-document.querySelector("arama").textContent = "DOM SELECTOR KAVRAMI";
+document.querySelector(".arama").textContent = "DOM SELECTOR KAVRAMI 😁";
 
 document.querySelector("#govde").style.backgroundImage =
   "linear-gradient(green,blue,pink)";
@@ -38,7 +39,7 @@ document.querySelector("#govde").style.backgroundImage =
 //**************EVENT */
 //fare ustune gelince renk degistirme
 
-const h = document.querySelector(".h1");
+const h = document.querySelector(".H1");
 
 h.onmouseover = function () {
   h.style.color = "red";
@@ -52,7 +53,7 @@ h.onmouseout = function () {
 
 //1. resme tikladigimda 1 ile 2. rresim yer degistirecek
 
-document.querySelector(".bir").onlick = function () {
+document.querySelector(".bir").onclick = function () {
   document.querySelector(".bir").src = "./img/logo2.png";
 
   document.querySelector(".iki").src = "./img/js_logo.png";
