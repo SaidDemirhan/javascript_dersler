@@ -35,5 +35,50 @@ document.querySelector(".ekle").onclick = function () {
 
 //degerleri silme
 document.querySelector(".sil").onclick = function () {
-  liste.removeChild(liste.lastChild);
+  liste.removeChild(liste.lastElementChild);
+};
+
+const yeniBaslik = document.querySelector(".forH1");
+yeniBaslik.innerHTML = `<h1>${"Programlama Dilleri"}</h1>`;
+
+//buyuk kucuk hale getirme
+
+document.querySelector(".textbox").onkeyup = function () {
+  const isaret = document.querySelector(".checkbox");
+  const metin = document.querySelector(".textbox");
+
+  if (isaret.checked) {
+    metin.value = metin.value.toUpperCase();
+  } else {
+    metin.value = metin.value.toLowerCase();
+  }
+};
+
+//mouse resmin üstune geldiginde aslan kukresin
+
+resim.onmouseover = function () {
+  resim.src = "./img/aslan2.jpeg";
+};
+
+//mouse resmin uzerinden ceklidiginde
+resim.onmouseout = function () {
+  resim.src = "./img/aslan1.jpeg";
+};
+
+/* //2.yol addEventListener() yolu
+
+resim.addEventListener("mouseout", function () {
+  resim.src = "./img/aslan1.jpeg";
+}); */
+
+//yeni bir dil eklemek icin enter a silmek icin dlelte basmak icin.
+document.querySelector(".dil").onkeydown = function (klavye) {
+  if (klavye.keyCode == 13) {
+    //enter tusu
+    document.querySelector(".ekle").onclick();
+  }
+  if (klavye.keyCode == 46) {
+    //delete tusu
+    document.querySelector(".sil").onclick();
+  }
 };

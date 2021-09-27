@@ -23,7 +23,7 @@ resim[1].style.border = "3px solid red";
 
 //*****GETELEMENTBYCLASSNAME */
 
-const baslık = document.getElementsByClassName("h1");
+const baslık = document.getElementsByClassName("H1");
 
 baslık[0].style.textAlign = "center";
 
@@ -55,6 +55,5 @@ h.onmouseout = function () {
 
 document.querySelector(".bir").onclick = function () {
   document.querySelector(".bir").src = "./img/logo2.png";
-
   document.querySelector(".iki").src = "./img/js_logo.png";
 };
