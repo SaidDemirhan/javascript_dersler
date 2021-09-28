@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* google font a gir display içinde start 2p, select yap */
 * {
   margin: 0;
   padding: 0;
@@ -15,28 +16,34 @@ header {
   border-bottom: 7px solid #eee;
 }
 h1 {
-  position: absolute;
-  text-align: center;
+  /* header parent ona position relative, child ı olan h1 e de absolute vererek parent ına göre yerleştirmiş oluyoruz, yani ortala dersek parentın içinde ortala*/
+  position: absolute; /*bu olmazsa sol üst köşeye yapışır. Elemente direk pozisyon verebiliyoruz. Relative'de olduğu gibi eski bulunduğu konuma göre HAREKET ETMİYOR.. Direk bizden aldığı pozisyon değerlerine göre hareket ediyor. Poziyonu belirlerken bir üstteki RELATİVE elemente göre konum alıyor. Eğer bu elementin PARENT(bir üstteki element) elementi RELATİVE değilse, o zaman BODY'ye göre hareket eder.
+   */
   width: 100%;
+  text-align: center;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*yazılan şey 0 px li olsaydı buna gerek yoktu, h1 e ayrılan alanda yüzde elli yazı girsin ve bu alanda yazı tam ortada bulunsun*/
 }
 .aralik {
   position: absolute;
   right: 15px;
   top: 20px;
+  text-align: right;
 }
-.tekrar {
-}
+
 .btn {
-  top: 15px;
-  left: 15px;
-  font-size: 30px;
+  margin-top: 15px;
+  margin-left: 15px;
+  border: none;
   font-family: inherit;
   /* buton disindakiler atanan font 
   family den butonlar da faydalanmasi icin verilen kavram */
   padding: 20px 25px;
   cursor: pointer;
   background-color: #eee;
+  text-align: center;
 }
 .question {
   position: absolute;
@@ -49,4 +56,42 @@ h1 {
   text-align: center;
   padding: 25px;
   transform: translate(-50%, 50%);
+}
+main {
+  height: 600px;
+  color: #eee;
+  display: flex; /*alttakileri kullanabilmek için*/
+  justify-content: space-around; /*yatay olarak*/
+  align-items: center;
+  /*dikey ortalar*/
+}
+.sag {
+  width: 400px;
+  font-size: 20px;
+}
+
+.sol {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tahmin {
+  background: none;
+  border: 5px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 40px;
+  text-align: center;
+  width: 300px;
+
+  /* display: block; */
+  margin-bottom: 20px;
+  padding: 50px;
+}
+.mesaj {
+  margin-bottom: 150px;
+}
+.puan {
+  margin-bottom: 20px;
 }
