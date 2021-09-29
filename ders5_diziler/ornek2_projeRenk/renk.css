@@ -1,0 +1,19 @@
+.konteynir {
+  border: 1px solid red;
+  width: 100vw;
+  /* wiewport yazinca ekran kucuk veya buyuk olmasi farketmeden kaplatir */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn {
+  padding: 20px;
+  background-color: bisque;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: rgb(214, 127, 21);
+}

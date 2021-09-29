@@ -1,21 +1,20 @@
 // bilgisayarin 0 ile 20 arasinda bir sayi tut
 
-let rastgeleSayijs = Math.floor(Math.random() * 20 + 1);
+let rastgeleSayi = Math.floor(Math.random() * 20 + 1);
 
-let skorPc = 10;
+let puanPc = 10;
 let rekorPc = 0;
 
 //her kontrol et butonuna tiklandiginda
 
 document.querySelector(".kontrol").onclick = function () {
   //tahmin dogru ise
-  const tahminjs = document.querySelector(".tahmin").value;
-  let mesajjs = document.querySelector(".mesaj").textContent;
+  const tahmin = document.querySelector(".tahmin").value;
 
-  if (tahminjs.value == rastgeleSayijs) {
+  if (tahmin == rastgeleSayi) {
     document.querySelector("body").style.backgroundColor = "green";
-    document.querySelector(".question").textContent = rastgeleSayijs;
-    mesajjs = "🥳Tebrikler!!! Bildiniz..";
+    document.querySelector(".question").textContent = rastgeleSayi;
+    document.querySelector(".mesaj").textContent = "🥳Tebrikler!!! Bildiniz..";
     //rekoru guncelle...
 
     if (puanPc > rekorPc) {
@@ -26,12 +25,13 @@ document.querySelector(".kontrol").onclick = function () {
   } else {
     if (puanPc > 1) {
       puanPc--;
-      tahminjs < rastgeleSayijs
-        ? (mesajjs = "⬆️ Arttir")
-        : (mesajjs = "⬇️Azalt");
+      let mesaj = document.querySelector(".mesaj");
+      tahmin < rastgeleSayi
+        ? (mesaj.textContent = "⬆️ Arttir")
+        : (mesaj.textContent = "⬇️Azalt");
       document.querySelector(".skor").textContent = puanPc;
     } else {
-      mesajjs.textContent = "Oyunu kaybettiniz!";
+      document.querySelector(".mesaj").textContent = "Oyunu kaybettiniz!";
       document.querySelector(".skor").textContent = 0;
       document.querySelector("body").style.backgroundColor = "red";
     }
@@ -40,10 +40,10 @@ document.querySelector(".kontrol").onclick = function () {
 //tekrar butonuna basildiginda baslangic degerleri yuklensin.
 
 document.querySelector(".tekrar").onclick = () => {
-  rastgeleSayijs = Math.floor(Math.random() * 20 + 1);
+  rastgeleSayi = Math.floor(Math.random() * 20 + 1);
   document.querySelector("body").backgroundColor = "#2d3436";
   document.querySelector(".question").textContent = "?";
-  mesajjs = "Tahmine Baslaniyor";
+  document.querySelector(".mesaj").textContent = "Tahmine Baslaniyor";
   puanPc = 10;
   document.querySelector(".skor").textContent = puanPc;
   document.querySelector(".tahmin").value = " ";
