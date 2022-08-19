@@ -1,3 +1,30 @@
-JavaScript notlari
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Notlari</h1>
+    Eger ayni sayfada yazmak istersek; <br>
+    <strong>&lt;script>&lt;/script></strong> elementleri arasina yazmaliyiz. <br>
+    head icinde olabilecegi gibi sayfa sonundaki <strong>&lt;/body></strong> <br>
+    etiketinin hemen üzerine de yerlestirebiliriz. <br><br>
 
-<script> etiketi arasina 
+    <strong>var sayi = 3;</strong> seklinde deger atanabilir.
+    <strong></strong>
+
+
+
+
+    <script>
+        var sayi1 = 3; 
+        var sayi2 = 18;
+var sayi = 3;
+        alert("toplamlari: "+ (sayi1+sayi2))
+    </script>
+
+</body>
+</html>
