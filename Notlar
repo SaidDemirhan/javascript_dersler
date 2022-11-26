@@ -22,8 +22,14 @@
     <script>
         var sayi1 = 3; 
         var sayi2 = 18;
-var sayi = 3;
+        var sayi = 3;
         alert("toplamlari: "+ (sayi1+sayi2))
+        
+        var marka;
+        marka = opel;
+        
+        var model=promt("Lütfen model giriniz: "); 
+        
     </script>
 
 </body>
