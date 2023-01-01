@@ -30,6 +30,34 @@
         
         var model=promt("Lütfen model giriniz: "); 
         
+        // eger hem datatype hem de deger karsilaritmasi yapilacaksa === kullanilmalidir.
+        
+        //Konsola yazdirmak icin;
+        console.log('arac manuel');
+        
+        var vites='1';
+        
+        //if yapisi
+        
+        if(vites=='1'){
+            console.log('arac manuel');
+        }else{
+            console.log('arac otomatik');
+        }
+        
+        //switch case yapisi
+        
+        switch(vites){
+            case '1':
+                console.log('arac manuel');
+                break;
+            case '2':
+                console.log('arac otomatik');
+                break;
+            default:
+                console.log('yanlis deger');
+        }
+        
     </script>
 
 </body>
