@@ -58,6 +58,16 @@
                 console.log('yanlis deger');
         }
         
+        
+        //Döngüler
+        //For dongusu
+        
+        for(var i=1; i<=10; i++){
+            console.log(i);
+        }
+        //konsola 1 den 10 a kadar sayilari yazacaktir.
+        
+        
     </script>
 
 </body>
