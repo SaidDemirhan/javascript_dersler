@@ -68,6 +68,12 @@
         //konsola 1 den 10 a kadar sayilari yazacaktir.
         //eger if (i%2==0){} koysaydik sadece cift sayilari yazacakti.
         
+            //break ve continue farki: 
+            if(i==5){
+               break;
+               } //dersek 5 i yazmadan döngüden cikar ve döngü sonlanir
+                 //ama Break yerine CONTINUE yazilsaydi 5 i yazmadan basa dönüp geri kalanlari da yazacakti.
+        
         // dizi yazma
         
         var sehirler = ["kocaeli", "izmir", "balikesir"];
@@ -86,9 +92,42 @@
             i++;
         }
         
+        //1den 10 a kadar sayilari konsola yadirmis olduk.
         //eger sehirleri yazdirmak isteseydik i=0 yapip sarta i<=sehirler.length yazip sehirler[i] konsola yadiracaktik.
         
-        //1den 10 a kadar sayilari konsola yadirmis olduk.
+        //sifre isteme programi
+        
+        var k_username = "guest";
+        var k_password = "12345";
+        var loggedin = false;
+        
+        while(loggedin == false){
+            var username = prompt("kullanici adi: ");
+            var password = prompt("sifre: ");
+            
+            if((k_username == username) && (k_password == password)){
+                console.log("Giris yapildi");
+                loggedin = true;
+            }else{
+                console.log("yanlis kullanici adi veya parola");
+            }
+        }    
+            
+        //dizi olusturma
+        
+        var markalar = ["opel", "Toyota", "Mazda", "Renault"];
+        var modeller = new Array("corsa", "yaris", "CX-3", "clio")
+        
+            //eger yadirmak istersek console.log(markalar) seklinde tüm dizi yazdirilir.
+            //eger belirli bir index yazdirilmak istenirse console.log(modeller[3]; yazdiysak clio yazacaktir.
+            // degistirmek istersek modeller[3] = "laguna"; olarak 3. indexteki degisektir.
+            
+        modeller.push('scenic'); //dizinin sonuna ekler.
+        modeller.unschift('focus'); //dizinin en basina ekler.
+        modeller.pop(); //sondaki degeri siler.
+        modeller, schift(); //bastaki degeri siler.
+        
+            
         
         
         
