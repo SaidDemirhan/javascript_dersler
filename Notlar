@@ -66,6 +66,31 @@
             console.log(i);
         }
         //konsola 1 den 10 a kadar sayilari yazacaktir.
+        //eger if (i%2==0){} koysaydik sadece cift sayilari yazacakti.
+        
+        // dizi yazma
+        
+        var sehirler = ["kocaeli", "izmir", "balikesir"];
+        
+        //eger biz bu sehirleri konsolda yazdirmak istersek 
+        
+        for(var i= 0; i<sehirler.length; i++){
+            console.log(sehirler[i]);
+        }
+        
+        //while döngüsü
+        
+        var i=1;
+        while(i<=10){
+            console.log(i);
+            i++;
+        }
+        
+        //eger sehirleri yazdirmak isteseydik i=0 yapip sarta i<=sehirler.length yazip sehirler[i] konsola yadiracaktik.
+        
+        //1den 10 a kadar sayilari konsola yadirmis olduk.
+        
+        
         
         
     </script>
