@@ -165,6 +165,101 @@
       toyota.renk = 'kirmizi';
       toyota.otomatik = true;
       
+      //eger bir obje icindeki bilgiyi degistirmek istersek;
+      
+      toyota.model = 'auris';
+      
+      // dizi icerisine dogrudan objeleri kaydedebiliriz ve istenilen indexteki bilgiyi alabiliriz.
+      
+      var arabalar = [
+        {
+            marka : 'opel',
+            model : 'astra',
+            yil : '2012',
+        },
+        {
+            marka : 'mercedes',
+            model : 'clk 200',
+            yil : '2014',
+        }
+      ];
+      console.log(arabalar[1].model);
+      
+      //eger dizideki tüm bilgileri yazdirmak istersek for loop kullanilabilir.
+      
+      for(var i = 0; i<arabalar.length; i++){
+        console.log(arabalar[i]);
+      }
+      
+      //eger sadece markalari yazdirmak isteseydik; 
+      
+      console.log(arabalar[i].marka);   //demeliydik.
+      
+      //obje icinde dizi olabilir:
+      
+      var ali = {
+        ad : 'ali',
+        soyad : 'yilmaz',
+        diller : ['almanca', 'ingilizce']
+      }
+      console.log(ali.diller);  // dilleri yan yana yazdirir.
+      console.log(ali.diller.length);   //kac dil bildigini gösterir.
+      
+      // eger dilleri alt alta yazdirmak istersek;
+      ali.diller.forEach(function(element){
+        console.log(element);
+      });                       //eger dizi olsaydi dizi adini element yerine yazacaktik.
+      
+      // fonksiyonlar
+      
+        //bir toplama methodu olusturalim ve bunu ekrana yazdiralim:
+        
+      function topla(a,b){
+        return a+b;
+      }
+      
+      var sonuc =topla (10,20);
+      
+      console.log(sonuc);       //sonuc olarak 30 yazdiracaktir
+      console.log(topla(40,50));        //bu sekilde de yapabiliriz 90 yazdiracaktir.
+      
+            //bir sayinin tek veya cift olma durumunu ifade eden fonksiyon yazalim
+            
+            function tekcift(sayi){
+                if(sayi%2==0){
+                return true;
+                }else{
+                return false;
+                }
+            }
+            
+            var sayi = tekcift(17);
+            console.log(sayi);      //false cikacaktir yani tektir.
+            
+            // girilen sayinin faktöryelini alan bir fonksiyon yazalim.
+            
+            function faktoriyel(sayi){
+                var sonuc = 1;
+            
+                for(var i = 2; i<=sayi; i++){
+                sonuc*=i;
+                }
+                return sonuc;
+            }
+      
+            //girdigimiz dizinin elemanlarini konsola yazdiran bir fonksiyon yazalim
+            
+            var markalar = ['opel', 'toyota', 'Mazda'];
+            
+            function yazdir(dizi){
+                dizi.forEach(function(item){
+                console.log(item);
+                });
+            }
+            yazdir(markalar);   //markalari sirasiyla konsola yazacaktir.
+            
+            
+        
         
     </script>
 
