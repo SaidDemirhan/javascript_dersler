@@ -142,6 +142,30 @@
         });    
         
         
+      //Object olusturma
+      
+      var opel = {
+        marka : 'opel',
+        model : 'corsa',
+        yil : '2012',
+        renk : 'beyaz',
+        otomatik : true
+      };
+      
+      console.log(opel);    //tüm objeyi yazdirir
+      console.log(opel.model);   //sadece opel objesinin modelini yazdirir.
+      console.log(opel['renk']);    // opel objesinin rengini yazdirir.
+        
+      //Object olusturma 2
+      
+      var toyota = new Object();
+      toyota.marka = 'toyota';
+      toyota.model = 'yaris';
+      toyota.yil = '2015';
+      toyota.renk = 'kirmizi';
+      toyota.otomatik = true;
+      
+        
     </script>
 
 </body>
