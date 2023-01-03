@@ -127,9 +127,19 @@
         modeller.pop(); //sondaki degeri siler.
         modeller, schift(); //bastaki degeri siler.
         
-            
+        //bir dizi icinde arama yapma
         
+        if(modeller.indexOf('focus')!==-1){
+            console.log(modeller[modeller.indexOf('focus')]);
+        }
         
+        //eger indexi -1 ise yok demektir, konsola yazdirmak icin if statement kullanilabilir.
+        
+        //for döngüsüne alternatif bir kullanim FOREACH
+        
+        modeller.forEach(function(element){
+            console.log(element);
+        });    
         
         
     </script>
