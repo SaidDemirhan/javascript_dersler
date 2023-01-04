@@ -71,5 +71,30 @@ for(var i = hour; i>=8; i--){
 
 #################################################################################################
 
+Css özellikleri olmadan bile biz JS ile bu öelliklerini tanimlayabiliriz.
 
+var title = document.getElementById('title');
+  //sayfadaki title i bir obje olarak atadik istersek yazdirabiliriz istersek baska bir sekle büründürebiliriz.
+  
+  console.log(title.classList);     //class atamasi yapilmissa onlari listeler.
+  
+  title.classList,add('baslik');    //seklinde kendimiz de buradan class ekleyebiliriz.
+  
+  title.classList.remove('baslik');   //seklinde bir class i silebiliriz.
+  
+  title.classList.toggle('baslik');   //yoksa class otusturup true degeri veriyor varsa silip false dönüyor.
+  
+  title.style,color='yellow';
+  title-style.fontSize='40px';
+  title.style.border='1px solid blue';
+  title.style.padding = '10px';
+  
+ ################################################################################################
+  
+  
+  
+  
+  
+  
+  
 
