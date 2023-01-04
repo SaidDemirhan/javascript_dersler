@@ -1,0 +1,8 @@
+Sayfayi incele diyerek veya F12 ye basarak console kismina geliyoruz.
+
+document yazip enter a basiyoruz.
+
+Elements kismindan belirledigimiz bir ögenin class ini ögreniyoruz.
+
+document,querySelector('....') yazip enter a basiyoruz.
+  Eger class ise .navbar-brand seklinde yazmayi unutma
