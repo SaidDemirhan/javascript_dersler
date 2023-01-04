@@ -259,6 +259,83 @@
             yazdir(markalar);   //markalari sirasiyla konsola yazacaktir.
             
             
+            // yazi kisaltma uygulamasi
+            
+            var cumle = 'nasilsin iyi misin daha daha nasilsin ben de iyiyim seni sormali'
+            
+            var maxKarakter = 20;
+            
+                //eger max karakter sayisi cümleden daha uzun ise cümleyi kisltmaya gerek yok. o yüzden bir if atalim,
+                
+            var ozetCumle = [];    
+            if(maxKarakter>cumle.length){
+                console.log(cumle);
+            }else {
+                // var ozet = cumle.substring(0,maxKarakter);
+                // console.log(ozet);      
+                // ilk 20 karakteri yazdi ama kelimenin yarida bölünmesini istemeyiz! o yüzden bir dizi olusturarak paragrafi 
+                // kelimeler arasindaki bosluklardan bölerek o dizinin icin aldirdik.
+                
+                var kelimeler = cumle.split(' ');
+                // console.log(kelimeler); cümledeki tüm kelimeleri konsolda yazdirir.
+                
+                //biz ilk 20 karakterdeki kelimeleri alacagimiz icin bir for döngüsü kurmaliyiz.
+                
+                var toplamKarakter = 0;
+                
+                for( var i=0; i<kelimeler.length; i++){
+                    ozetCumle.unschift(kelimeler[i]);  //bosluklarindan ayirdigimiz kelimeleri ozetCumle dizisine aktaracagiz.
+                    toplamKarakter += kelimeler[i].length;  //kelimelerin harf sayisini toplam karaktere ekletiyoruz.
+                    
+                    //toplam karakter bizim belirledigimiz karakterden büyük olursa for döngüsünü break ile bitirmemiz gerekiyor.
+                    
+                    if(toplamKarakter>maxKarakter){
+                        break;
+                    }
+                }
+                console.log(ozetCumle);     // 6 elemanli bir dizi seklinde yazdirir ama biz cümle seklinde isteriz;
+                console.log(ozetCumle.join(' ') + '...');
+                
+                //bunu bir fonksiyonun icine alabiliriz.
+                
+                function ozet(cumle, maxKarakter){
+                    var cumle = 'nasilsin iyi misin daha daha nasilsin ben de iyiyim seni sormali'
+                    var ozetCumle = [];    
+                    if(maxKarakter>cumle.length){
+                        return cumle;
+                    }else {
+                        var kelimeler = cumle.split(' ');
+                        var toplamKarakter = 0;
+                
+                        for( var i=0; i<kelimeler.length; i++){
+                            ozetCumle.unschift(kelimeler[i]);  
+                            toplamKarakter += kelimeler[i].length;  
+                                      
+                            if(toplamKarakter>maxKarakter){
+                                break;
+                            }
+                        }
+                    }
+                    return ozetCumle.join(' ') + '...';
+                }
+            
+            //artik bu fonksiyonu kullanabiliriz.
+            
+            console.log(ozet(cumle,30));    //30 karakterlik kisaltilmis bir paragraf aliriz.
+            
+            //fonksiyonu bir objenin icinde de kullanabiliriz. 
+            
+            var product = {
+                name : 'Samsung S10';
+                price : 200
+                description : 'Ekran Boyutu 6.1 İnç; Ekran Teknolojisi Dynamic AMOLED ; BATARYA. 
+                Batarya Kapasitesi (Tipik) 3400 mAh; Konuşma Süresi (3G) 21 Saat ; KAMERA.' ;
+                summary : function(){
+                //yazdigimiz fonksiyonu buraya kopyalayabiliriz
+                //var cumle = this.description; yazarak aslinda cümle yerine bir üst kategorideki description'i
+                kullandigimizi söylemis oluyoruz. uygun sekilde parametreleri degistiriyoruz.
+                }
+            }
         
         
     </script>
