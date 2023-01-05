@@ -194,3 +194,34 @@ for (var i= 0; i<liler.length;i++){         //forEach da kullanabilirdik.
 }
 
 #######################################################################################
+Kisa kisa notlar
+
+-if(i<>5){}        //i eger 5 e esit degilse
+
+-call myFunction()    //fonksiyon cagirma
+
+-onclick      //bir html elemanina tiklamayi ifade eder
+
+-navigator.appName      //kullanicinin kullandigi tarayici adini bulur
+
+-<script src="örnek.js">      //bir js dosyasina ulasmanin yolu
+
+-w2 = window.new(http://www.google.com");   //yeni bir pencerede acilir.
+
+-Math.round(7.25)     // en yakin tam sayiya yuvarlama fonksiyonu
+
+-onMauseUp      //farenin basili olan tusu birakma olayidir.
+
+-confirm      //onay pencersi olusturur.
+
+-splice     //methodu ile dizi elemanlarini ekleyip cikarabiliriz.
+
+-onBlur     //fare olaylarini kontrol eder
+
+-onkeyDown    //klavye tuslari ile ilgili olaylari gözler
+
+-onMouseMove    //farenin elementin üzerinde dolasmasi
+
+-onResize   //tarayici penceresini büyültür veya kücültür.
+
+
