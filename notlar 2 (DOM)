@@ -39,7 +39,7 @@ var blau = document.getElementsByTagName('h5');
 setInterval(function(){ if(isBlau){blau.style.color='green';isBlau= false;}else{blau.style.color='blue';isBlau=true;}},1000); //ya da
 setInterval(function(){if(isRed){red.style.background='green';}else{red.style.background='red';}isRed=!isRed;},1000);
 
-bu seilde sectigimiz element her saniye renk degistirmis olacaktir.
+bu sekilde sectigimiz element her saniye renk degistirmis olacaktir.
 
 ###############################################################################################
 
@@ -91,10 +91,106 @@ var title = document.getElementById('title');
   
  ################################################################################################
   
+  Bir web sayfasindaki icerigi degistirmek icin;
   
+  var p = document.getElementsByTagName('p')[0];
+  console.log('p');   //etiketli sekilde p yi yazdirir.
+  console.log(p.textContent);   //sadece p de ne yaziyorsa onu consola yazdirir.
   
+  p.textContent = 'degistirilmis text';   yazdirdigimizda yenisi gelir.
   
+  p.innerHTML = '<b>degistirilimis</b> metin';    //html özellikleri kullanilacaksa innerHTML kullanilmalidir.
   
+  ###############################################################################################
   
+  listeyi js ile eklemek;
   
+  bir dizi miz var ve icinde objeler var.
+  
+  var models = [
+    {name: 'Mazda', selected: false},
+    {name: 'Toyota', selected: false},
+    {name: 'Volvo', selected: true},
+    {name: 'Renault', selected: false},
+    {name: 'Mercedes', selected: false}
+  ];
+  
+  var html=document.querySelector('....');    //ul un class ini yazalim
+  
+  models.forEach(function(model){
+  
+  var li = '';
+    if(model.selected){
+      li = '<li class=".... active">'+model.name'</li>';   //li nin class ini ekledik   //active bir bootstream ozelligi
+    }else{
+      li = '<li class="....">'+model.name'</li>';   
+    }
+    html.innerHTML+=li;     // += diyerek öncekini silmesini de engelledik.
+  }); 
+  
+    //bunlari tabi script tagi icinde yazmaliyiz.
+    
+  ################################################################################################  
+  
+  atribute degistirme
+  
+  img etiketinin src atributu veya a etiketinin href atributu gibi
+  
+   document.querySelector('a')
+   var a = document.querySelector('a');       //eger birden fazla varsa querySelectorAll('...')[1] kullailabilir.
+   
+   a.getAttribute('href')   //ile hrefteki linki görebiliriz.
+   
+   a.setAttribute('href','http://www.google.com')
+  
+  #################################################################################################
+  
+  Random class i ile sayi üretme
+  
+  var index = Math.floor(Math.random()*10);
+  
+  sifir ile 10 arasinda asagiya dogru yuvarlanmis(floor) rastgele(random) bir rakam olusturur.
+  
+  sayi yerine dizinin uzunlugunu koymak daha mantiklidir. models.length
+  
+  #################################################################################################
+  
+  setInterval fonksiyonu ile belirli saniyede islem tekrari yaptirabiliyoruz.
+  
+    setInterval(function(){},1000);
 
+###################################################################################################
+
+Js de Events
+
+Butona basinca yazinin deigmesini istiyoruz:
+
+var btn = document.querySelector('...');      //id ini # isaretini basa koyarak yazabiliriz.
+
+var p =document.querySelector('p')    // eger bir tane varsa zaten etiket ismi yazmak yeterli oluyordu.
+
+btn.addEventListener('click',function(){      
+  console.log('button clicked');     //mesela burda her butona tiklandiginda konsolda istenilen yazi geliyor.
+  p.textContent= 'button clicked';      //tiklandiginda paragraf yerinde istenilen yazi yazilacak.
+});
+
+istersek function yerine baska yerde olusturdugumuz bir function un adini yazabiliriz.
+
+h1.addEventListener('click', changeColor);
+
+function changeColor (){
+  h1.style.color('red');
+}
+
+eger bir listeyi ayri ayri ama ayni özelligi tanimlamak istersek;
+
+var liler =document.querySelectorAll('li');
+
+for (var i= 0; i<liler.length;i++){         //forEach da kullanabilirdik.
+  liler[i].addEventListener('click',function(){
+    this.style.color= 'blue';                       //ayni elemani kastediyorsak this kelimesini de kullanabiliriz. (container ici)
+    this.style.textDecoration='underline';
+  });
+}
+
+#######################################################################################
