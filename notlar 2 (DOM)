@@ -24,7 +24,7 @@ Sayfada bir degisiklik yapilacaksa yeni bir degisken tanimlamamiz lazim:
     
     
     
-############################################################################################
+##########################################################################################
 
 document.getElementById('...')  //ile bir element secebiliriz.
 document.getElementsByTagName('div')    //tüm div elementlerini collection icinde getirir.
