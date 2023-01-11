@@ -23,11 +23,6 @@ Sayfada bir degisiklik yapilacaksa yeni bir degisken tanimlamamiz lazim:
     for(var i=0;i<headers.length;i++){headers[i].style.color='blue';}   //h5 leri mavi yaptik
     
     
-    veya
-    document.getElementsByTagName('h5') //etiketlerine ulasip bunlari bir araya getirip
-    üzerinde islem yapabiliriz:
-    var headers = document.getElementsByTagName('h5');
-    for(var i=0;i<headers.length;i++){headers[i].style.color='blue';}   //h5 leri mavi yaptik
 ############################################################################################
 
 document.getElementById('...')  //ile bir element secebiliriz.
