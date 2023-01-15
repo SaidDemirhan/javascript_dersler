@@ -16,6 +16,12 @@ Sayfada bir degisiklik yapilacaksa yeni bir degisken tanimlamamiz lazim:
     logo.style.color= 'red' //kirmizi yazabilirsin
     logo.remove()   //silebilirsin
     
+    
+    logo.innerText= 'istedigini yaz' //enter    //istenilen yaziyi yazabilirsin
+    logo.style.color= 'red' //kirmizi yazabilirsin
+    logo.remove()   //silebilirsin
+    
+    
     veya
     document.getElementsByTagName('h5') //etiketlerine ulasip bunlari bir araya getirip
     üzerinde islem yapabiliriz:
