@@ -17,9 +17,6 @@ Sayfada bir degisiklik yapilacaksa yeni bir degisken tanimlamamiz lazim:
     logo.remove()   //silebilirsin
     
     
-    logo.innerText= 'istedigini yaz' //enter    //istenilen yaziyi yazabilirsin
-    logo.style.color= 'red' //kirmizi yazabilirsin
-    logo.remove()   //silebilirsin
     
     
     veya
