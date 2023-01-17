@@ -35,6 +35,12 @@ document.querySelector('#...')    //id ile secilen elementi secer
 document.querySelector('...')     // class ile yazilan ILK elementi getirir.
 document.querySelectorAll('.navbar_fixed')    /class adina sahip olan hepsini getirir.
 
+document.getElementById('...')  //ile bir element secebiliriz.
+document.getElementsByTagName('div')    //tüm div elementlerini collection icinde getirir.
+document.getElementsByClassName('...')  //class name leri bir dizi icinde getirir.
+document.querySelector('#...')    //id ile secilen elementi secer
+document.querySelector('...')     // class ile yazilan ILK elementi getirir.
+document.querySelectorAll('.navbar_fixed')    /class adina sahip olan hepsini getirir.
 
 var isBlau = false;
 var blau = document.getElementsByTagName('h5');
