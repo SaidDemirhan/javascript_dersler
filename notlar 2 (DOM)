@@ -5,7 +5,7 @@ document yazip enter a basiyoruz.
 Elements kismindan belirledigimiz bir ögenin class ini ögreniyoruz.
 
 document,querySelector('....') yazip enter a basiyoruz.
-  Eger class ise .navbar-brand seklinde yazmayi unutma
+  Eger class ise .navbar-brand seklinde yazmayi unutma!
   
 Sayfada bir degisiklik yapilacaksa yeni bir degisken tanimlamamiz lazim:
   var logo = document.querySelector('....')
