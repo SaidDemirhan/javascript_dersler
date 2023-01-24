@@ -57,7 +57,7 @@ bir listedeki tüm elemanlarin üzerini cizmek isteseydik:
 var liste = document.querySellectorAll('li');
 liste.forEach(function(element){element.style.textDecoration='line-through';});   //buraya kadarini css ile de yapardik
 
-################################################################################################
+###############################################################################################
 
 eger saati gecmis olan listedeki görevlerin üzerinin cizilmesini ve yapildi isaretlenmesini istersek;
 //liste görevleri saat 8 ile 23 arasi olsun...
