@@ -103,7 +103,7 @@ var title = document.getElementById('title');
   
   p.innerHTML = '<b>degistirilimis</b> metin';    //html özellikleri kullanilacaksa innerHTML kullanilmalidir.
   
-  ###############################################################################################
+  ##############################################################################################
   
   listeyi js ile eklemek;
   
