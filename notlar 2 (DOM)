@@ -26,7 +26,7 @@ Sayfada bir degisiklik yapilacaksa yeni bir degisken tanimlamamiz lazim:
     for(var i=0;i<headers.length;i++){headers[i].style.color='blue';}   //h5 leri mavi yaptik
     
     
-##########################################################################################
+#########################################################################################
 
 document.getElementById('...')  //ile bir element secebiliriz.
 document.getElementsByTagName('div')    //tüm div elementlerini collection icinde getirir.
