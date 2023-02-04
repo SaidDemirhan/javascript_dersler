@@ -12,9 +12,6 @@ Sayfada bir degisiklik yapilacaksa yeni bir degisken tanimlamamiz lazim:
     enter a bastigimizda artik elimizde yeni bir objemiz var ve objemizin adi logo.
     artik biz bu logo objemiz üzerinden islem yapabiliriz
     
-    logo.innerText= 'istedigini yaz' //enter    //istenilen yaziyi yazabilirsin
-    logo.style.color= 'red' //kirmizi yazabilirsin
-    logo.remove()   //silebilirsin
     
     logo.innerText= 'istedigini yaz' //enter    //istenilen yaziyi yazabilirsin
     logo.style.color= 'red' //kirmizi yazabilirsin
@@ -28,7 +25,7 @@ Sayfada bir degisiklik yapilacaksa yeni bir degisken tanimlamamiz lazim:
     for(var i=0;i<headers.length;i++){headers[i].style.color='blue';}   //h5 leri mavi yaptik
     
     
-#########################################################################################
+############################################################################################
 
 document.getElementById('...')  //ile bir element secebiliriz.
 document.getElementsByTagName('div')    //tüm div elementlerini collection icinde getirir.
