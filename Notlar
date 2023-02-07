@@ -93,7 +93,7 @@
         }
         
         //1den 10 a kadar sayilari konsola yadirmis olduk.
-        //eger sehirleri yazdirmak isteseydik i=0 yapip sarta i<=sehirler.length yazip sehirler[i] konsola yadiracaktik.
+        //eger sehirleri yazdirmak isteseydik i=0 yapip sarta i<=sehirler.length yazip sehirler[i] konsola yazdiracaktik.
         
         //sifre isteme programi
         
@@ -118,7 +118,7 @@
         var markalar = ["opel", "Toyota", "Mazda", "Renault"];
         var modeller = new Array("corsa", "yaris", "CX-3", "clio")
         
-            //eger yadirmak istersek console.log(markalar) seklinde tüm dizi yazdirilir.
+            //eger yazdirmak istersek console.log(markalar) seklinde tüm dizi yazdirilir.
             //eger belirli bir index yazdirilmak istenirse console.log(modeller[3]; yazdiysak clio yazacaktir.
             // degistirmek istersek modeller[3] = "laguna"; olarak 3. indexteki degisektir.
             
