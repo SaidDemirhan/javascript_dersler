@@ -1,0 +1,62 @@
+console.log("Hello World");
+console.log("%cHello", "color : green; font-size : x-large");
+
+//degiskenler
+
+var myName = "JavaScrit";
+//degisebilir glabaldir
+
+let yas = "degisir";
+//degeri degisebilir
+
+const deger = "degismez";
+//degeri degismez
+
+console.log(myName);
+
+var personel = ["Ali", "Ece", "Can"];
+
+console.log(personel); //(3) ['Ali', 'Ece', 'Can']
+
+//Data type
+
+console.log(typeof deger); //string
+
+//string, number, boolean, null, undefined
+
+var araba = null;
+console.log(typeof araba); //object olarak gelir.
+
+var otomatikMi = true;
+
+console.log(myName + "in " + deger + " kurallari vardir."); //JavaScritin degismez kurallari vardir.
+
+var mesaj = myName + "in " + deger + " kurallari vardir."; //JavaScritin degismez kurallari vardir.
+console.log(mesaj);
+
+//Backtick: Stringleri dinamik birlestirmek icin kullanilir.
+
+var mesaj2 = `${myName}in ${deger} kurallari vardir`;
+console.log(`${myName}in ${deger} kurallari vardir`); //direkt de yazdirabiliriz
+console.log(mesaj2); //atama yaparak da yazdirabiliriz.
+
+//fonksiyonlar
+//parametresiz
+function muhtesem() {
+  console.log("hi!!");
+}
+
+muhtesem();
+
+//parametreli
+function muhtesem2(isim) {
+  console.log("hi " + isim);
+}
+
+muhtesem2("Ali");
+
+function insan(isim,yas){
+    console.log(isim+" "+yas)
+}
+
+insan("Aziz",42);
