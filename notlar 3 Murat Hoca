@@ -55,8 +55,67 @@ function muhtesem2(isim) {
 
 muhtesem2("Ali");
 
-function insan(isim,yas){
-    console.log(isim+" "+yas)
+function insan(isim, yas) {
+  console.log(isim + " " + yas); //istersek direkt yazdiririz
 }
 
-insan("Aziz",42);
+insan("Aziz", 42);
+
+function insan2(isim, yas) {
+  //istersek return kullaniriz
+  return isim + " " + yas;
+}
+
+console.log(insan2("Aziz", 42));
+
+function insan3(isim, yas) {
+  //istersek de BACKTICK ile yazabiliriz.
+  return `${isim} ${yas}`;
+}
+
+console.log(insan3("Kadir", 16));
+
+const sayininKaresi = function kareAlma(sayi) {
+  return sayi * sayi;
+};
+
+console.log(sayininKaresi(8));
+//kareAlma(7); seklinde kullanilamiyor cünkü scop ta kalmis oluyor.
+
+//#############################################################
+
+//Anonymous(isimsiz) Fonksiyon
+
+//eger bir fonksiyonun ismi yoksa onu bir degiskene atayabiliriz.
+
+var sonuc = function (a, b, c) {
+  return a + b + c;
+};
+
+console.log(sonuc(2, 6, 5));
+
+//############################################################
+
+//Arrow fonksiyon
+
+//function kelimesi ve fonksiyonun adi silinir
+//parametre ve boy arasina => isaretini koyuyoruz
+
+var arrow = (a) => a + 100; //eger tek parametre varsa parantezi kaldirabiliriz.
+
+console.log(arrow(8));
+
+var arrow2 = (a, b) => a + b + 10;
+
+console.log(arrow2(8, 2));
+
+//prizmanin hacmini bulalim
+
+var prizma = function (boy, derinlik, yukseklik) {
+  return boy * derinlik * yukseklik;
+};
+console.log(prizma(1, 5, 3));
+
+var prizma2 = (a, b, c) => a * b * c;
+
+console.log(prizma2(3, 2, 4));
