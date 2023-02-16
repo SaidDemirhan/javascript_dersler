@@ -119,3 +119,122 @@ console.log(prizma(1, 5, 3));
 var prizma2 = (a, b, c) => a * b * c;
 
 console.log(prizma2(3, 2, 4));
+
+//*************************************** */
+
+//Object: data kaydetmek icin kullanilir
+//{} le olusturulur
+
+var ad = "Ali";
+var soyad = "Can";
+var yasi = 25;
+var kisiBilgisi = `${ad} ${soyad} ${yasi}`;
+
+console.log(kisiBilgisi);
+
+//kisi objesi olusturalim
+var kisi = {
+  ad: "Kadir",
+  soyad: "Ayazli", // Aralardaki virgulleri Unutma!!!
+  yasi: 28,
+  calisiyorMu: true,
+};
+
+//bilgileri cagirma ve turunu ogrenme
+
+console.log(typeof kisi); //object
+console.log(kisi); //{ad: 'Kadir', soyad: 'Ayazli', yasi: 28, calisiyorMu: true}
+
+console.log(kisi.soyad); //Ayazli
+console.log(typeof kisi.soyad); //string
+
+//diger yol
+
+console.log(kisi["ad"]); //Kadir
+
+//#################
+
+//Nested object
+
+var calisan = {
+  ad: "Ayse",
+  soyad: "Cakir",
+  yas: 23,
+  calisiyorMu: true,
+  adres: {
+    sehir: "Ankara",
+    cadde: "Halicilar Cd.",
+    sokak: "256. sk.",
+    no: 68,
+  },
+  hobiler: ["yüzmek", "bisiklet sürmek", "dagcilik"], //array olarak yazdik
+};
+
+console.log(calisan); //{ad: 'Ayse', soyad: 'Cakir', yas: 23, calisiyorMu: true, adres: {…},…}
+console.log(calisan.yas); //23
+console.log(calisan.adres); //{sehir: 'Ankara', cadde: 'Halicilar Cd.', sokak: '256. sk.', no: 68}
+console.log(calisan.hobiler); //3) ['yüzmek', 'bisiklet sürmek', 'dagcilik']
+console.log(calisan.hobiler[2]); //dagcilik
+
+//************************** */
+
+//Arrays
+
+var arkadaslarim = ["Efe", "Can", "Ali"];
+console.log(arkadaslarim); //(3) ['Efe', 'Can', 'Ali']
+
+//diger yöntem
+
+var arkadaslarim2 = new Array("banu", "hafsa", "seckin");
+console.log(arkadaslarim2); //(3) ['banu', 'hafsa', 'seckin']
+console.log(arkadaslarim2[1]); //hafsa
+
+//eger bir ismi degistirmek istersek
+
+arkadaslarim2[1] = "kadriye";
+console.log(arkadaslarim2); //(3) ['banu', 'kadriye', 'seckin']
+
+//yeni deger eklemek istersek
+
+arkadaslarim2[4] = "rukiye";
+console.log(arkadaslarim2); //(5) ['banu', 'kadriye', 'seckin', empty, 'rukiye']
+
+//Array in tipi objedir
+
+console.log(typeof arkadaslarim2); //object
+
+//*********Array komutlari ******* */
+
+//push array in sonuna veri ekler
+
+arkadaslarim2.push("cemile");
+console.log(arkadaslarim2); //(6) ['banu', 'kadriye', 'seckin', empty, 'rukiye', 'cemile']
+
+//unschift array in basina ekler
+
+arkadaslarim2.unshift("rabia");
+console.log(arkadaslarim2); //(7) ['rabia', 'banu', 'kadriye', 'seckin', empty, 'rukiye', 'cemile']
+
+//pop son veriyi siler
+
+arkadaslarim2.pop();
+console.log(arkadaslarim2); //(6) ['rabia', 'banu', 'kadriye', 'seckin', empty, 'rukiye']
+
+//shift ilk datayi siler
+
+arkadaslarim2.shift();
+console.log(arkadaslarim2); //(5) ['banu', 'kadriye', 'seckin', empty, 'rukiye']
+
+//yen bir Array tanimlayalim
+var yaslar = [20, 10, 23, 13, 46, 34];
+console.log(yaslar); //(6) [20, 10, 23, 13, 46, 34]
+
+//indexof(item,from)
+
+console.log(yaslar.indexOf(13)); //3
+
+// ayni yas ekleyelim
+yaslar.push(13, 13, 20);
+console.log(yaslar); //(9)[20, 10, 23, 13, 46, 34, 13, 13, 20]
+
+console.log(yaslar.indexOf(13, 2));
