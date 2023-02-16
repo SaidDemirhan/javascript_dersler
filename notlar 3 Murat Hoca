@@ -229,7 +229,7 @@ console.log(arkadaslarim2); //(5) ['banu', 'kadriye', 'seckin', empty, 'rukiye']
 var yaslar = [20, 10, 23, 13, 46, 34];
 console.log(yaslar); //(6) [20, 10, 23, 13, 46, 34]
 
-//indexof(item,from)
+//indexof(item,from) latIndexOf(item)
 
 console.log(yaslar.indexOf(13)); //3
 
@@ -237,4 +237,34 @@ console.log(yaslar.indexOf(13)); //3
 yaslar.push(13, 13, 20);
 console.log(yaslar); //(9)[20, 10, 23, 13, 46, 34, 13, 13, 20]
 
-console.log(yaslar.indexOf(13, 2));
+console.log(yaslar.lastIndexOf(13)); //7
+//son indexi getirir
+
+//return -1 eslesme yok manasina gelir
+
+//includes bir elemanin olup olmadigini true veya false olarak getirir.
+
+console.log(yaslar.includes(13));   //true
+console.log(yaslar.includes(13,8))  //false : belirtilen indexten sonra olmadigini bildirir.
+
+//splice: ekleme silme degistirme
+
+const arr = [1, 2, 3, 4];
+
+// 1. Örnekte: başlangıç indeksi 1 olan diziden 2 öğe çıkarıyoruz (2, 3).
+arr.splice(1, 2); // arr şimdi [1, 4] şeklindedir.
+
+// 2. Örnekte: başlangıç indeksi 1 olan dizinin içine 2. ve 3. indekslere 99 ve 100 değerlerini ekliyoruz.
+arr.splice(1, 0, 99, 100); // arr şimdi [1, 99, 100, 4] şeklindedir.
+
+// 3. Örnekte: başlangıç indeksi 2 olan dizinin 1. öğesini 99 ile değiştiriyoruz.
+arr.splice(2, 1, 99); // arr şimdi [1, 99, 100, 4] şeklindedir.
+
+//Bu metodun kullanımı splice(startIndex, deleteCount, item1, item2, ...) şeklindedir. 
+//İlk parametre, öğelerin eklenip çıkarılacağı dizinin başlangıç indeksini belirtir. 
+//İkinci parametre, kaç öğenin silineceğini belirtir. 
+//Eğer bu parametre 0 ise hiçbir öğe silinmez ve sadece ekleme yapılır. 
+//Eğer bu parametre belirtilmezse, başlangıç indeksinden sonraki tüm öğeler silinir.
+
+//Üçüncü parametre ve sonraki parametreler, eklemek istediğiniz öğelerdir. 
+//Bu parametreler opsiyoneldir, yani eklemek istemediğiniz öğeleri belirtmek zorunda değilsiniz.
