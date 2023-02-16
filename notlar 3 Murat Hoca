@@ -244,8 +244,8 @@ console.log(yaslar.lastIndexOf(13)); //7
 
 //includes bir elemanin olup olmadigini true veya false olarak getirir.
 
-console.log(yaslar.includes(13));   //true
-console.log(yaslar.includes(13,8))  //false : belirtilen indexten sonra olmadigini bildirir.
+console.log(yaslar.includes(13)); //true
+console.log(yaslar.includes(13, 8)); //false : belirtilen indexten sonra olmadigini bildirir.
 
 //splice: ekleme silme degistirme
 
@@ -260,11 +260,224 @@ arr.splice(1, 0, 99, 100); // arr şimdi [1, 99, 100, 4] şeklindedir.
 // 3. Örnekte: başlangıç indeksi 2 olan dizinin 1. öğesini 99 ile değiştiriyoruz.
 arr.splice(2, 1, 99); // arr şimdi [1, 99, 100, 4] şeklindedir.
 
-//Bu metodun kullanımı splice(startIndex, deleteCount, item1, item2, ...) şeklindedir. 
-//İlk parametre, öğelerin eklenip çıkarılacağı dizinin başlangıç indeksini belirtir. 
-//İkinci parametre, kaç öğenin silineceğini belirtir. 
-//Eğer bu parametre 0 ise hiçbir öğe silinmez ve sadece ekleme yapılır. 
+//Bu metodun kullanımı splice(startIndex, deleteCount, item1, item2, ...) şeklindedir.
+//İlk parametre, öğelerin eklenip çıkarılacağı dizinin başlangıç indeksini belirtir.
+//İkinci parametre, kaç öğenin silineceğini belirtir.
+//Eğer bu parametre 0 ise hiçbir öğe silinmez ve sadece ekleme yapılır.
 //Eğer bu parametre belirtilmezse, başlangıç indeksinden sonraki tüm öğeler silinir.
 
-//Üçüncü parametre ve sonraki parametreler, eklemek istediğiniz öğelerdir. 
+//Üçüncü parametre ve sonraki parametreler, eklemek istediğiniz öğelerdir.
 //Bu parametreler opsiyoneldir, yani eklemek istemediğiniz öğeleri belirtmek zorunda değilsiniz.
+
+console.log(arr); //(4)[1, 99, 99, 4]
+arr.splice(-2); //sondan iki tanesini siler
+console.log(arr); //(2) [1, 99]
+
+//slice(startIndex-dahil,endIndex-haric)
+
+var aylar = ["ocak", "subat", "mart", "nisan", "mayis"];
+
+console.log(aylar); //(5)['ocak', 'subat', 'mart', 'nisan', 'mayis']
+
+var secilenAylar = aylar.slice(2); //arrayin icerisinden alir ama array a zarar vermez.
+console.log(secilenAylar); //(3) ['mart', 'nisan', 'mayis']
+
+console.log(aylar.slice(2, 4)); //(2)['mart', 'nisan']
+
+//-3 yazarsak son 3 indexi getirir.
+//eger parantez icini bos birakirsak dizinin tamamini kopyalar.
+
+//concat:arraylari birlestirir.
+
+var dizi1 = [1, 3, 5, 7, 9];
+var dizi2 = [0, 2, 4, 6, 8];
+console.log(dizi1.concat(dizi2)); //(10) [1, 3, 5, 7, 9, 0, 2, 4, 6, 8]
+
+//reverse:ters cevirve
+
+console.log(dizi1.reverse()); //(5) [9, 7, 5, 3, 1]
+
+//sort sirala
+
+console.log(dizi1.concat(dizi2).sort()); //(10) [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+//büyükten kucuge
+
+console.log(dizi1.concat(dizi2).sort().reverse()); //(10) [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+//********************************************** */
+
+//loops
+
+//for loop
+
+for (let i = 0; i <= 5; i++) {
+  console.log(i);
+}
+
+//while loop
+
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+
+//Do While loop
+
+let x = 0;
+do {
+  console.log(x);
+  x++;
+} while (x < 5);
+
+//örnegin 1 ile 10 arasindaki bir sayiyi tahmin etme programi yazali:
+
+let randomNumber = Math.floor(Math.random() * 5) + 1; // 1 ile 5 arasında rastgele bir sayı oluşturulur
+let guess;
+console.log(randomNumber); // tahmin edilen sayi burada yazilir.
+
+//sonrasini her defasinda rahatsiz etmesin diye yorum satirina aldik.
+//do {
+//  guess = prompt("1 ile 10 arasinda bir sayi tahmin edin:");
+//} while (parseInt(guess) !== randomNumber);
+
+//alert("Tebrikler, doğru sayiyi buldunuz!");
+
+// for...of loop
+
+const meyve = ["apple", "banana", "orange"];
+for (let item of meyve) {
+  console.log(item);
+}
+
+console.log(typeof meyve); //object  :bir arrayi yazdirdik !Array de bir obje dir.
+
+//for...in loop
+
+const person = { isim: "John", yas: 30, sehir: "New York" };
+for (let a in person) {
+  console.log(a + ": " + person[a]);
+}
+
+//isim: John
+//yas: 30
+//sehir: New York
+//seklinde consol da yazildi
+
+console.log(typeof person); //object  :bir objeyi yazdirdik
+
+//Eger birden fazla kisi bilgisi varsa:
+
+let people = [
+  {
+    name: "Ahmet",
+    age: 25,
+    city: "Ankara",
+    occupation: "Engineer",
+  },
+  {
+    name: "Ayşe",
+    age: 30,
+    city: "Istanbul",
+    occupation: "Teacher",
+  },
+  {
+    name: "Mehmet",
+    age: 45,
+    city: "Izmir",
+    occupation: "Doctor",
+  },
+];
+
+for (let i = 0; i < people.length; i++) {
+  console.log("Person " + (i + 1) + ":");
+  for (let prop in people[i]) {
+    console.log(prop + " = " + people[i][prop]);
+  }
+  console.log("");
+}
+
+//Person 1:
+//name = Ahmet
+//age = 25
+//city = Ankara
+//occupation = Engineer
+//seklinde hepsini ayri ayri yazdirdi
+
+for (let i = 0; i < people.length; i++) {
+  console.log(people[i]); //{name: 'Ahmet', age: 25, city: 'Ankara', occupation: 'Engineer'}
+}
+
+//console.log(people[i].age) ile sadece yasini yazdirabiliriz.
+
+for (let a of people) {
+  console.log(a); //{name: 'Ahmet', age: 25, city: 'Ankara', occupation: 'Engineer'}
+}
+
+//console.log(a.age) ile sadece yasini yazdirabiliriz.
+
+//for each loop
+
+let myArray = [1, 2, 3, 4, 5];
+
+myArray.forEach(function (element) {
+  console.log(element); //alt alta 1,2,3,4,5 yazildi
+});
+
+//burda arrow function daha fazla tercih edilir.
+
+myArray.forEach((a) => {
+  console.log(a);
+});
+
+//***************************************************************** */
+
+//Map 
+
+//bir diziyi isleme sokarak yeni bir dizi olusturma isine yarar.
+
+var array1=[2,4,6,8,10]
+console.log(array1) //(5)[2, 4, 6, 8, 10]
+
+function ikiIleCarp(x){
+  return x*2
+}
+
+
+var array2= array1.map(ikiIleCarp)
+console.log(array2) //(5) [4, 8, 12, 16, 20]
+
+//***************************************************************** */
+
+//Filter
+
+//Bir dizideki elemanlari filitreleme islevi görür
+
+const originalArray = [1, 2, 3, 4, 5];
+
+const evenArray = originalArray.filter((number) => {
+  return number % 2 === 0;  //3 tane koyulmasinin sebebi ayni zamanda data türünü de kontrol etmesi icindir.
+  //5=="5" true iken 5==="5" false döndürecektir.
+});
+
+console.log(evenArray); // [2, 4] seklinde 2 ye bölünebilen sayilari getirdi
+
+//baska bir örnek:
+
+const students = [
+  { name: 'John', age: 20 },
+  { name: 'Jane', age: 22 },
+  { name: 'Bob', age: 18 },
+  { name: 'Alice', age: 25 }
+];
+
+const adults = students.filter((student) => {
+  return student.age > 20;
+});
+
+console.log(adults); 
+// {name: 'Jane', age: 22}
+// {name: 'Alice', age: 25}
+
+
