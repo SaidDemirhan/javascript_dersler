@@ -1,6 +1,18 @@
 console.log("Hello World");
 console.log("%cHello", "color : green; font-size : x-large");
 
+var model=promt("Lütfen model giriniz: ");
+
+alert("Merhaba, dünya!");
+
+var cevap = confirm("Emin misiniz?");
+if (cevap == true) {
+    alert("Onaylandı!");
+} else {
+    alert("Reddedildi!");
+}
+
+
 //degiskenler
 
 var myName = "JavaScrit";
