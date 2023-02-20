@@ -1,0 +1,178 @@
+JavaScript
+console.log("Hello World");
+console.log("%cHello", "color : green; font-size : x-large");
+
+var model=promt("Lütfen model giriniz: ");
+
+alert("Merhaba, dünya!");
+
+var cevap = confirm("Emin misiniz?");
+if (cevap == true) {
+    alert("Onaylandı!");
+} else {
+    alert("Reddedildi!");
+}
+//Degiskenler
+var myName = "JavaScrit";	
+let yas = "degisir";
+const deger = "degismez";
+console.log(typeof deger); //string	//Data type
+string, number, boolean, null, undefined
+//5=="5" true iken 5==="5" false döndürecektir.
+//Backtick: Stringleri dinamik birlestirme
+console.log(`${myName}in ${deger} kurallari vardir`); 
+//If Satatements
+if(vites=='1'){
+            console.log('arac manuel');
+        }else{
+            console.log('arac otomatik');
+        }
+//switch case yapisi
+        
+        switch(vites){
+            case '1':
+                console.log('arac manuel');
+                break;
+            case '2':
+                console.log('arac otomatik');
+                break;
+            default:
+                console.log('yanlis deger');
+        }
+//fonksiyonlar
+function muhtesem() {	//parametresiz
+  console.log("hi!!");
+}
+muhtesem();	//function call
+function muhtesem2(isim) {	//parametreli
+  	console.log("hi " + isim);
+}
+muhtesem2("Ali");	//function call
+function insan2(isim, yas) {
+  //istersek return kullaniriz
+  return isim + " " + yas;	//return ile
+}
+console.log(insan2("Aziz", 42));
+//Anonymous(isimsiz) Fonksiyon
+var sonuc = function (a, b, c) {	//ismi yok ama atanmis
+  return a + b + c;
+};
+console.log(sonuc(2, 6, 5));
+//Arrow fonksiyon
+var arrow = (a) => a + 100; 	//tek parameter, parantezi kaldir
+console.log(arrow(8));
+var arrow2 = (a, b) => a + b + 10;
+console.log(arrow2(8, 2));
+//Object
+var kisi = {
+  ad: "Kadir",
+  soyad: "Ayazli", 	// virgulleri Unutma!!!
+  yasi: 28,
+  calisiyorMu: true,
+};
+console.log(kisi); 
+console.log(kisi.soyad); 
+console.log(kisi["ad"]); 	//ikinci yol
+console.log(typeof kisi.soyad); //string
+
+//Nested object
+var calisan = {
+  ad: "Ayse",
+  soyad: "Cakir",
+  yas: 23,
+  calisiyorMu: true,
+  adres: {
+    sehir: "Ankara",
+    cadde: "Halicilar Cd.",
+    sokak: "256. sk.",
+    no: 68,
+  },
+  hobiler: ["yüzmek", "bisiklet sürmek", "dagcilik"]
+};
+console.log(calisan); 
+console.log(calisan.yas); //23
+console.log(calisan.hobiler[2]); //dagcilik
+
+//Arrays
+var arkadaslarim = ["Efe", "Can", "Ali"];
+console.log(arkadaslarim); 
+
+var arkadaslarim2 = new Array("banu", "hafsa", "seckin");	//diger yol
+console.log(arkadaslarim2); 
+console.log(arkadaslarim2[1]); //hafsa	
+
+arkadaslarim2[1] = "kadriye";	//degisiklik icin
+console.log(arkadaslarim2); //(3) ['banu', 'kadriye', 'seckin']
+
+arkadaslarim2[4] = "rukiye";	//yeni deger ekleme
+console.log(arkadaslarim2); //(5) ['banu', 'kadriye', 'seckin', empty, 'rukiye']
+
+//*********Array komutlari ******* */	arr.push()
+push()		sonuna veri ekler
+unschift() 		basina ekler
+pop()		son veriyi siler
+shift()		ilk datayi siler
+indexof() 		kacinci indexte bulundugunu getirir
+lastIndexOf()	tekrarli ise sonuncu tekrarlananin indexi	
+//return -1 eslesme yok manasina gelir
+Includes()		olup olmadigini true veya false olarak getirir.
+(“ali”, 8)); //false : belirtilen indexten sonra yok
+splice()		sirasi, sonrasindan x adet sil, eklenecek(ler)/degistirilecegi yaz.
+const arr = [1, 2, 3, 4];
+arr.splice(1, 2, 8); 	// arr şimdi [1, 8, 4] şeklinde
+arr.splice(-2); //sondan iki tanesini siler //arr[1]
+slice()		array den bozmadan  parca getirir.
+// startIndex-dahil,endIndex-haric
+// -3 yazarsak son 3 indexi getirir.
+// parantez bossa dizinin hepsini getiri.
+concat()		arraylari birlestirir.
+console.log(dizi1.concat(dizi2));
+reverse()		tersine yazdirir
+sort()		kücükten büyüge siralar
+//büyükten kucuge
+console.log(dizi1.concat(dizi2).sort().reverse()); 
+//*** loops *** */
+for (let i = 0; i <= 5; i++) {
+  console.log(i);
+}
+let i = 0;
+while (i < 5) {
+  	  console.log(i);
+  i++;
+}
+let x = 0;
+do {
+  console.log(x);
+  x++;
+} while (x < 5);
+const meyve = ["apple", "banana", "orange"];
+for (let item of meyve) {
+  console.log(item);
+}
+const person = { isim: "John", yas: 30, sehir: "New York" };
+for (let a in person) {
+  console.log(a + ": " + person[a]);
+}
+
+let myArray = [1, 2, 3, 4, 5];
+myArray.forEach(function (element) {
+  console.log(element); //alt alta 1,2,3,4,5 yazildi
+});
+myArray.forEach((a) => {	// arrow function tercih edilir.
+  console.log(a);
+});
+//*** Map *** */
+//bir diziyi isleme sokarak yeni bir dizi olusturur.
+var array1=[2,4,6,8,10]
+function ikiIleCarp(x){
+  return x*2
+}
+var array2= array1.map(ikiIleCarp)
+console.log(array2) //(5) [4, 8, 12, 16, 20]
+//*** Filter *** */
+const originalArray = [1, 2, 3, 4, 5];	// dizideki elemanlari filitreler.
+
+const evenArray = originalArray.filter((number) => {
+  return number % 2 === 0;
+});
+console.log(evenArray); // [2, 4] 2 ye bölünebilen sayilar.
